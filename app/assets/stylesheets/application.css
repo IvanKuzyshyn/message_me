@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
+.header {
+    width: 100%;
+}
+
+.chatrooms-index {
+    display: flex;
+}
+
+.chat {
+    width: 75%;
+    padding: 20px;
+}
+
+.users-in-chat {
+    width: 25%;
+    padding: 20px;
+}
+
+.user {
+    font-size: 14px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #707172;
+    margin-bottom: 8px;
+}
+
+.user:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.message {
+    display: flex;
+}
