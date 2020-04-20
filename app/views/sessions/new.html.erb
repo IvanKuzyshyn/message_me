@@ -1,11 +1,13 @@
 <%= render 'layouts/header' %>
 <div class="sign-in">
   <div class="current-user">
-    <form action="">
-      <input type="email" name="" id="">
-      <input type="password" name="" id="">
-      <button type="submit">Log in</button>
-    </form>
+    <%= form_for(:session, {role: "form", url: login_path}) do |f| %>
+      <%= f.label :email, "Email" %>
+      <%= f.email_field :email, placeholder: "Enter users email" %>
+      <%= f.label :password, "Password" %>
+      <%= f.password_field :password, placeholder: "Enter password" %>
+      <%= f.button "Log In" %>
+    <% end %>
   </div>
   <div class="new-user">
     <button type="button">Register</button>
