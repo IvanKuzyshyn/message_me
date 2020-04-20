@@ -5,10 +5,10 @@
       <%= render @messages %>
     </div>
     <div class="chat-controls">
-      <form action="">
-        <input type="text" name="" placeholder="Type something..." id="">
-        <button type="button">Send</button>
-      </form>
+      <%= form_for(@message, { url: message_path, role: "form" }) do |f| %>
+        <%= f.text_field :body, placeholder: "Type something..." %>
+        <%= f.button "Send" %>
+      <% end %>
     </div>
   </div>
   <div class="users-in-chat">
