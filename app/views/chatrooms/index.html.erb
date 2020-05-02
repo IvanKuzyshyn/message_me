@@ -1,12 +1,12 @@
 <%= render 'layouts/header' %>
 <div class="chatrooms-index">
   <div class="chat">
-    <div class="chat-history">
+    <div class="chat-history" id="messages-container">
       <%= render @messages %>
     </div>
     <div class="chat-controls">
-      <%= form_for(@message, { url: message_path, role: "form" }) do |f| %>
-        <%= f.text_field :body, placeholder: "Type something..." %>
+      <%= form_for(@message, { url: message_path, role: "form", remote: true }) do |f| %>
+        <%= f.text_field :body, placeholder: "Type something...", id: 'message-source' %>
         <%= f.button "Send" %>
       <% end %>
     </div>
