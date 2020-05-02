@@ -10,7 +10,7 @@ consumer.subscriptions.create("ChatroomChannel", {
   },
 
   received(data) {
-    console.log('DATA', data)
-    // Called when there's incoming data on the websocket for this channel
+    document.querySelector('#messages-container').insertAdjacentHTML('beforeend', data.template);
+    document.querySelector('#message-source').value = '';
   }
 });
