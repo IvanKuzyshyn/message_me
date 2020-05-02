@@ -67,6 +67,12 @@ html, body {
     margin-bottom: 24px;
 }
 
+.author {
+    margin-right: 10px;
+    font-weight: bold;
+    color: royalblue;
+}
+
 .flash-message.success {
     color: #0e804a;
     background-color: rgba(135, 255, 172, 0.5);
